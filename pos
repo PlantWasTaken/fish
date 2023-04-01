@@ -1,0 +1,11 @@
+from pynput import mouse
+from pynput.mouse import Button, Controller
+from PIL import ImageGrab
+import time as t
+
+m = Controller()
+image = ImageGrab.grab()
+
+while(True):
+    t.sleep(1)
+    print(format(m.position), image.getpixel(m.position))
